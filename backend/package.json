@@ -1,0 +1,16 @@
+{
+  "name": "iiotAnalyser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vladyslav Shchehlov <v.shcheglov@student.csn.khai.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
