@@ -1,5 +1,5 @@
 import express from 'express'
-import { processTemperatureMeasureBatch } from './service/elasticSearchService.js'
+import { processTemperatureMeasureBatch, processHumidityMeasureBatch } from './service/elasticSearchService.js'
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || '8080'
@@ -12,10 +12,16 @@ app.get('/health', (req, res) => {
   res.send('Server is running...')
 })
 
-app.post('/sensor', async (req, res) => {
+app.post('/sensor/temperature', async (req, res) => {
   const temperatureMeasureBatch = req.body
   processTemperatureMeasureBatch(temperatureMeasureBatch)
   res.send({ msg: `Processing ${temperatureMeasureBatch.length} measures` })
+})
+
+app.post('/sensor/humidity', async (req, res) => {
+  const humidityMeasureBatch = req.body
+  processHumidityMeasureBatch(humidityMeasureBatch)
+  res.send({ msg: `Processing ${humidityMeasureBatch.length} measures` })
 })
 
 app.listen(PORT, HOST)
