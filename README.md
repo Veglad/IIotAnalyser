@@ -65,5 +65,17 @@ Example:
     { "sensorId": "ASD23E011", "timestamp": "2020-12-19T12:22:00Z", "value": 49.0 },
     { "sensorId": "ASD23E011", "timestamp": "2020-12-19T12:22:05Z", "value": 48.14 },
 ]
-```
+```  
+
+### Kibana dashboard and configuration restoring
+
+1. Open Kibana and proceed with the following url path: `<Kibana url>/app/management/kibana/objects`
+2. Click **Import** and drag'n'drop the **export.ndjson** file from the root of this repo
+3. Click **Import** button
+
+### Using Kibana
+
+1. After importing configuration and dashboard, open side menu and proceed to the Kibana > Dashboard section
+2. Here you can see the humidity / temperature dahsboard
+3. You can change the displaying date range in the right corner of the toolbar
 
