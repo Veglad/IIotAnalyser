@@ -23,7 +23,7 @@ That's it!
 
 #### Log temperature measures batch
 
-**Method:** POST
+**Method:** POST  
 **Path:** /sensor/temperature  
 **Headers:** Content-Type: application/json  
 **Body**: [TemperatureMeasure]  
@@ -47,7 +47,7 @@ Example:
 
 #### Log humidity measures batch
 
-**Method:** POST
+**Method:** POST  
 **Path:** /sensor/humidity  
 **Headers:** Content-Type: application/json  
 **Body*** [HumidityMeasure]  
